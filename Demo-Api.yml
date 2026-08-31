@@ -5,3 +5,5 @@ management:
         include: "*"
 
 message: "this is just a message from config server" 
+server:
+  port:3333
