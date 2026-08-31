@@ -1,17 +1,12 @@
 spring:
-  application:
-    name: 05Api-Gatewayy
-    cloud:
-        gateway:
-          server:
-           webfux:
-            routes:
-             - id: demo-api
-               uri: lb://DEMO-API
-               predicates:
-                - Path=/api/auth/**
-                
-server:
-  port: 3333
+  boot:
+    admin:
+      client:
+        url:http://localhost:1111
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
-message= "this is just a message from config server" 
+message: "this is just a message from config server" 
